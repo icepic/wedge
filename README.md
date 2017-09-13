@@ -3,6 +3,7 @@
 </p>
 <h3 align="center">Every Site on HTTPS <!-- Serve Confidently --></h3>
 <p align="center">Caddy is a general-purpose HTTP/2 web server that serves HTTPS by default.</p>
+<p align="center"><strong>Wedge</strong> is a fork of Caddy, with sponsor headers removed.</p>
 <p align="center">
 	<a href="https://travis-ci.org/mholt/caddy"><img src="https://img.shields.io/travis/mholt/caddy.svg?label=linux+build"></a>
 	<a href="https://ci.appveyor.com/project/mholt/caddy"><img src="https://img.shields.io/appveyor/ci/mholt/caddy.svg?label=windows+build"></a>
@@ -24,6 +25,15 @@
 Caddy is fast, easy to use, and makes you more productive.
 
 Available for Windows, Mac, Linux, BSD, Solaris, and [Android](https://github.com/mholt/caddy/wiki/Running-Caddy-on-Android).
+
+## Building Wedge
+
+```
+go get github.com/caddyserver/builds
+go get github.com/WedgeServer/wedge/caddy
+```
+
+Then `cd` to `wedge/caddy` and `go run build.go`.
 
 ## Menu
 
