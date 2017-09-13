@@ -35,6 +35,8 @@ func init() {
 	flag.StringVar(&goarm, "goarm", "", "GOARM for which to build")
 }
 
+const binaryName = "wedge"
+
 func main() {
 	flag.Parse()
 
@@ -50,7 +52,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	args := []string{"build", "-ldflags", ldflags}
+	args := []string{"build", "-o", binaryName, "-ldflags", ldflags}
 	args = append(args, "-asmflags", fmt.Sprintf("-trimpath=%s", gopath))
 	args = append(args, "-gcflags", fmt.Sprintf("-trimpath=%s", gopath))
 	cmd := exec.Command("go", args...)

@@ -31,7 +31,7 @@ func init() {
 	flag.StringVar(&caddytls.DefaultCAUrl, "ca", "https://acme-v01.api.letsencrypt.org/directory", "URL to certificate authority's ACME server directory")
 	flag.BoolVar(&caddytls.DisableHTTPChallenge, "disable-http-challenge", caddytls.DisableHTTPChallenge, "Disable the ACME HTTP challenge")
 	flag.BoolVar(&caddytls.DisableTLSSNIChallenge, "disable-tls-sni-challenge", caddytls.DisableTLSSNIChallenge, "Disable the ACME TLS-SNI challenge")
-	flag.StringVar(&conf, "conf", "", "Caddyfile to load (default \""+caddy.DefaultConfigFile+"\")")
+	flag.StringVar(&conf, "conf", "", "Wedgefile to load (default \""+caddy.DefaultConfigFile+"\")")
 	flag.StringVar(&cpu, "cpu", "100%", "CPU cap")
 	flag.BoolVar(&plugins, "plugins", false, "List installed plugins")
 	flag.StringVar(&caddytls.DefaultEmail, "email", "", "Default ACME CA account email address")
@@ -42,7 +42,7 @@ func init() {
 	flag.StringVar(&revoke, "revoke", "", "Hostname for which to revoke the certificate")
 	flag.StringVar(&serverType, "type", "http", "Type of server to run")
 	flag.BoolVar(&version, "version", false, "Show version")
-	flag.BoolVar(&validate, "validate", false, "Parse the Caddyfile but do not start the server")
+	flag.BoolVar(&validate, "validate", false, "Parse the Wedgefile but do not start the server")
 
 	caddy.RegisterCaddyfileLoader("flag", caddy.LoaderFunc(confLoader))
 	caddy.SetDefaultCaddyfileLoader("default", caddy.LoaderFunc(defaultLoader))
