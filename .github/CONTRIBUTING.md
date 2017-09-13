@@ -1,9 +1,8 @@
-Contributing to Caddy
+Contributing to Wedge
 =====================
 
-Welcome! Thank you for choosing to be a part of our community. Caddy wouldn't be great without your involvement!
-
-For starters, we invite you to join [the Caddy forum](https://caddy.community) where you can hang out with other Caddy users and developers.
+Welcome! There's a lot around here that still references the upstream project. Your patience is appreciated whilst
+these references are corrected.
 
 ## Common Tasks
 
@@ -23,7 +22,7 @@ Other menu items:
 
 ### Contributing code
 
-You can have a direct impact on the project by helping with its code. To contribute code to Caddy, open a [pull request](https://github.com/mholt/caddy/pulls) (PR). If you're new to our community, that's okay: **we gladly welcome pull requests from anyone, regardless of your native language or coding experience.** You can get familiar with Caddy's code base by using [code search at Sourcegraph](https://sourcegraph.com/github.com/mholt/caddy/-/search).
+You can have a direct impact on the project by helping with its code. To contribute code to Wedge, open a [pull request](https://github.com/WedgeServer/wedge/pulls) (PR). If you're new to our community, that's okay: **we gladly welcome pull requests from anyone, regardless of your native language or coding experience.** You can get familiar with Wedge's code base by using [code search at Sourcegraph](https://sourcegraph.com/github.com/WedgeServer/wedge/-/search).
 
 We hold contributions to a high standard for quality :bowtie:, so don't be surprised if we ask for revisions&mdash;even if it seems small or insignificant. Please don't take it personally. :wink: If your change is on the right track, we can guide you to make it mergable.
 
@@ -52,62 +51,56 @@ We often grant [collaborator status](#collaborator-instructions) to contributors
 
 Contributing to Go projects on GitHub is fun and easy. We recommend the following workflow:
 
-1. [Fork this repo](https://github.com/mholt/caddy). This makes a copy of the code you can write to.
+1. [Fork this repo](https://github.com/WedgeServer/wedge). This makes a copy of the code you can write to.
 
-2. If you don't already have this repo (mholt/caddy.git) repo on your computer, get it with `go get github.com/mholt/caddy/caddy`.
+2. If you don't already have this repo (`WedgeServer/wedge.git`) repo on your computer, get it with `go get github.com/WedgeServer/wedge/caddy`.
 
-3. Tell git that it can push the mholt/caddy.git repo to your fork by adding a remote: `git remote add myfork https://github.com/you/caddy.git`
+3. Tell git that it can push the `WedgeServer/wedge.git` repo to your fork by adding a remote: `git remote add myfork https://github.com/you/wedge.git`
 
-4. Make your changes in the mholt/caddy.git repo on your computer.
+4. Make your changes in the `WedgeServer/wedge.git` repo on your computer.
 
 5. Push your changes to your fork: `git push myfork`
 
-6. [Create a pull request](https://github.com/mholt/caddy/pull/new/master) to merge your changes into mholt/caddy @ master. (Click "compare across forks" and change the head fork.)
+6. [Create a pull request](https://github.com/WedgeServer/wedge/pull/new/master) to merge your changes into WedgeServer/wedge @ master. (Click "compare across forks" and change the head fork.)
 
 This workflow is nice because you don't have to change import paths. You can get fancier by using different branches if you want.
 
 
 ### Writing a plugin
 
-Caddy can do more with plugins! Anyone can write a plugin. Plugins are Go libraries that get compiled into Caddy, extending its feature set. They can add directives to the Caddyfile, change how the Caddyfile is loaded, and even implement new server types (e.g. HTTP, DNS). When it's ready, you can submit your plugin to the Caddy website so others can download it.
+Wedge can do more with plugins! Anyone can write a plugin. Plugins are Go libraries that get compiled into Wedge, extending its feature set. They can add directives to the Wedgefile, change how the Wedgefile is loaded, and even implement new server types (e.g. HTTP, DNS).
 
-[Learn how to write and submit a plugin](https://github.com/mholt/caddy/wiki) on the wiki. You should also share and discuss your plugin idea [on the forums](https://caddy.community) to have people test it out. We don't use the Caddy issue tracker for plugins.
+[Learn how to write and submit a plugin](https://github.com/WedgeServer/wedge/wiki) on the wiki. You should also share and discuss your plugin idea [on the forums](https://caddy.community) to have people test it out. We don't use the Caddy issue tracker for plugins.
 
 
 ### Getting help using Caddy
 
-If you have a question about using Caddy, [ask on our forum](https://caddy.community)! There will be more people there who can help you than just the Caddy developers who follow our issue tracker. Issues are not the place for usage questions.
-
-Many people on the forums could benefit from your experience and expertise, too. Once you've been helped, consider giving back by answering other people's questions and participating in other discussions.
+If you have a question about using Wedge, create a new issue!
 
 
 ### Reporting bugs
 
-Like every software, Caddy has its flaws. If you find one, [search the issues](https://github.com/mholt/caddy/issues) to see if it has already been reported. If not, [open a new issue](https://github.com/mholt/caddy/issues/new) and describe the bug, and somebody will look into it! (This repository is only for Caddy, not plugins.)
+Like every software, Wedge has its flaws. If you find one, [search the issues](https://github.com/WedgeServer/wedge/issues) to see if it has already been reported. If not, [open a new issue](https://github.com/WedgeServer/wedge/issues/new) and describe the bug, and somebody will look into it! (This repository is only for Wedge, not plugins.)
 
 **You can help stop bugs in their tracks!** Speed up the patch by identifying the bug in the code. This can sometimes be done by adding `fmt.Println()` statements (or similar) in relevant code paths to narrow down where the problem may be. It's a good way to [introduce yourself to the Go language](https://tour.golang.org), too.
 
-Please follow the issue template so we have all the needed information. Unredacted&mdash;yes, actual values matter. We need to be able to repeat the bug using your instructions. Please simplify the issue as much as possible. The burden is on you to convince us that it is actually a bug in Caddy. This is easiest to do when you write clear, concise instructions so we can reproduce the behavior (even if it seems obvious). The more detailed and specific you are, the faster we will be able to help you!
+Please follow the issue template so we have all the needed information. Unredacted&mdash;yes, actual values matter. We need to be able to repeat the bug using your instructions. Please simplify the issue as much as possible. The burden is on you to convince us that it is actually a bug in Wedge. This is easiest to do when you write clear, concise instructions so we can reproduce the behavior (even if it seems obvious). The more detailed and specific you are, the faster we will be able to help you!
 
 We suggest reading [How to Report Bugs Effectively](http://www.chiark.greenend.org.uk/~sgtatham/bugs.html).
 
-Please be kind. :smile: Remember that Caddy comes at no cost to you, and you're getting free support when we fix your issues. If we helped you, please consider helping someone else!
+Please be kind. :smile: Remember that Wedge comes at no cost to you, and you're getting free support when we fix your issues. If we helped you, please consider helping someone else!
 
 
 ### Suggesting features
 
-First, [search to see if your feature has already been requested](https://github.com/mholt/caddy/issues). If it has, you can add a :+1: reaction to vote for it. If your feature idea is new, open an issue to request the feature. You don't have to follow the bug template for feature requests. Please describe your idea thoroughly so that we know how to implement it! Really vague requests may not be helpful or actionable and without clarification will have to be closed.
+First, [search to see if your feature has already been requested](https://github.com/WedgeServer/wedge/issues). If it has, you can add a :+1: reaction to vote for it. If your feature idea is new, open an issue to request the feature. You don't have to follow the bug template for feature requests. Please describe your idea thoroughly so that we know how to implement it! Really vague requests may not be helpful or actionable and without clarification will have to be closed.
 
-While we really do value your requests and implement many of them, not all features are a good fit for Caddy. Most of those [make good plugins](https://github.com/mholt/caddy/wiki), though, which can be made by anyone! But if a feature is not in the best interest of the Caddy project or its users in general, we may politely decline to implement it into Caddy core.
+While we really do value your requests and implement many of them, not all features are a good fit for Wedge. Most of those make good plugins, though, which can be made by anyone! But if a feature is not in the best interest of the Wedge project or its users in general, we may politely decline to implement it into Wedge core.
 
 
 ### Improving documentation
 
-Caddy's documentation is available at [https://caddyserver.com/docs](https://caddyserver.com/docs). If you would like to make a fix to the docs, feel free to contribute at the [caddyserver/website](https://github.com/caddyserver/website) repository!
-
-Note that plugin documentation is not hosted by the Caddy website, other than basic usage examples. They are managed by the individual plugin authors, and you will have to contact them to change their documentation.
-
-
+Wedge documentation is not yet available.
 
 ## Collaborator Instructions
 
@@ -128,9 +121,9 @@ Collabators have push rights to the repository. We grant this permission after o
 
 - **Prefer squashed commits over a messy merge.** If there are many little commits, please [squash the commits](https://stackoverflow.com/a/11732910/1048862) so we don't clutter the commit history.
 
-- **Don't accept new dependencies lightly.** Dependencies can make the world crash and burn, but they are sometimes necessary. Choose carefully. Extremely small dependencies (a few lines of code) can be inlined. The rest may not be needed. For those that are, Caddy vendors all dependencies with the help of [gvt](https://github.com/FiloSottile/gvt). All external dependencies must be vendored, and _Caddy must not export any types defined by those dependencies_. Check this diligently!
+- **Don't accept new dependencies lightly.** Dependencies can make the world crash and burn, but they are sometimes necessary. Choose carefully. Extremely small dependencies (a few lines of code) can be inlined. The rest may not be needed. For those that are, Wedge vendors all dependencies with the help of [gvt](https://github.com/FiloSottile/gvt). All external dependencies must be vendored, and _Caddy must not export any types defined by those dependencies_. Check this diligently!
 
-- **Be extra careful in some areas of the code.** There are some critical areas in the Caddy code base that we review extra meticulously: the `caddy` and `caddytls` packages especially.
+- **Be extra careful in some areas of the code.** There are some critical areas in the Wedge code base that we review extra meticulously: the `caddy` and `caddytls` packages especially.
 
 - **Make sure tests test the actual thing.** Double-check that the tests fail without the change, and pass with it. It's important that they assert what they're purported to assert.
 
@@ -151,10 +144,13 @@ Collabators have push rights to the repository. We grant this permission after o
 
 ## Responsible Disclosure
 
-If you've found a security vulnerability, please email me, the author, directly: Matthew dot Holt at Gmail. I'll need enough information to verify the bug and make a patch. It will speed things up if you suggest a working patch. If your report is valid and a patch is released, we will not reveal your identity by default. If you wish to be credited, please give me the name to use. Thanks for responsibly helping Caddy&mdash;and thousands of websites&mdash;be more secure!
+If you've found a security vulnerability, double check whether it's present in the upstream project or not. The change
+from upstream should be minimal, so if the security issue is present in the upstream code you should report it there.
 
+If you think that you've discovered an issue in Wedge's changes, use the [keybase key](https://keybase.io/lol768) to
+create an encrypted issue detailing the problem.
 
 ## Thank you
 
-Thanks for your help! Caddy would not be what it is today without your
+Thanks for your help! Wedge would not be what it is today without your
 contributions.
