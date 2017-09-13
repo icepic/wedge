@@ -46,7 +46,7 @@ Follow the instructions above for building from source. Binaries will be availab
 To serve static files from the current working directory, run:
 
 ```
-caddy
+wedge
 ```
 
 The default port is 2015, so open your browser to [http://localhost:2015](http://localhost:2015).
@@ -56,14 +56,14 @@ The default port is 2015, so open your browser to [http://localhost:2015](http:/
 If the binary has permission to bind to low ports and your domain name's DNS records point to the machine you're on:
 
 ```
-caddy -host example.com
+wedge -host example.com
 ```
 
 This command serves static files from the current directory over HTTPS. Certificates are automatically obtained and renewed for you!
 
 ### Customizing your site
 
-To customize how your site is served, create a file named Caddyfile by your site and paste this into it:
+To customize how your site is served, create a file named Wedgefile by your site and paste this into it:
 
 ```plain
 localhost
@@ -77,11 +77,11 @@ proxy  /api 127.0.0.1:7005
 header /api Access-Control-Allow-Origin *
 ```
 
-When you run `caddy` in that directory, it will automatically find and use that Caddyfile.
+When you run `wedge` in that directory, it will automatically find and use that Wedgefile.
 
 This simple file enables server push (via Link headers), allows directory browsing (for folders without an index file), hosts a WebSocket echo server at /echo, serves clean URLs, logs requests to an access log, proxies all API requests to a backend on port 7005, and adds the coveted  `Access-Control-Allow-Origin: *` header for all responses from the API.
 
-Wow! Caddy can do a lot with just a few lines.
+Wow! Wedge can do a lot with just a few lines.
 
 ### Doing more with Wedge 
 
@@ -97,7 +97,7 @@ Wedge is production-ready if you find it to be a good fit for your site and work
 
 **Running as root:** We advise against this. You can still listen on ports < 1024 on Linux using setcap like so: `sudo setcap cap_net_bind_service=+ep ./caddy`
 
-How you choose to run Wedge is up to you. Many users are satisfied with `nohup caddy &`. Others use `screen`. Users who need Wedge to come back up after reboots either do so in the script that caused the reboot, add a command to an init script, or configure a service with their OS.
+How you choose to run Wedge is up to you. Many users are satisfied with `nohup wedge &`. Others use `screen`. Users who need Wedge to come back up after reboots either do so in the script that caused the reboot, add a command to an init script, or configure a service with their OS.
 
 If you have questions or concerns about Wedge' underlying crypto implementations, consult Go's [crypto packages](https://golang.org/pkg/crypto), starting with their documentation, then issues, then the code itself; as Wedge uses mainly those libraries.
 
