@@ -921,7 +921,7 @@ var (
 var (
 	// DefaultConfigFile is the name of the configuration file that is loaded
 	// by default if no other file is specified.
-	DefaultConfigFile = "Caddyfile"
+	DefaultConfigFile = "Wedgefile"
 )
 
 // CtxKey is a value type for use with context.WithValue.

@@ -236,7 +236,7 @@ func setCPU(cpu string) error {
 	return nil
 }
 
-const appName = "Caddy"
+const appName = "Wedge"
 
 // Flags that control program flow or startup
 var (
