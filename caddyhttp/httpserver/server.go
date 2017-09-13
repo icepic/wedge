@@ -19,9 +19,9 @@ import (
 	"time"
 
 	"github.com/lucas-clemente/quic-go/h2quic"
-	"github.com/mholt/caddy"
-	"github.com/mholt/caddy/caddyhttp/staticfiles"
-	"github.com/mholt/caddy/caddytls"
+	"github.com/WedgeServer/wedge"
+	"github.com/WedgeServer/wedge/caddyhttp/staticfiles"
+	"github.com/WedgeServer/wedge/caddytls"
 )
 
 // Server is the HTTP server implementation.

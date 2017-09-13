@@ -9,7 +9,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/mholt/caddy/caddyhttp/httpserver"
+	"github.com/WedgeServer/wedge/caddyhttp/httpserver"
 )
 
 func TestGzipHandler(t *testing.T) {

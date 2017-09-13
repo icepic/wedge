@@ -7,7 +7,7 @@ import (
 	"html"
 	"net/http"
 
-	"github.com/mholt/caddy/caddyhttp/httpserver"
+	"github.com/WedgeServer/wedge/caddyhttp/httpserver"
 )
 
 // Redirect is middleware to respond with HTTP redirects

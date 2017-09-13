@@ -8,7 +8,7 @@ import (
 
 	"strconv"
 
-	"github.com/mholt/caddy/caddyhttp/httpserver"
+	"github.com/WedgeServer/wedge/caddyhttp/httpserver"
 )
 
 const (

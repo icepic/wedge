@@ -3,7 +3,7 @@ package push
 import (
 	"net/http"
 
-	"github.com/mholt/caddy/caddyhttp/httpserver"
+	"github.com/WedgeServer/wedge/caddyhttp/httpserver"
 )
 
 type (

@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/mholt/caddy/caddyhttp/httpserver"
+	"github.com/WedgeServer/wedge/caddyhttp/httpserver"
 )
 
 type erroringMiddleware struct{}

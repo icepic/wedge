@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/mholt/caddy/caddytls"
+	"github.com/WedgeServer/wedge/caddytls"
 )
 
 // StorageTest is a test harness that contains tests to execute all exposed

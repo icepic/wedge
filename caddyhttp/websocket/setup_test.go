@@ -3,8 +3,8 @@ package websocket
 import (
 	"testing"
 
-	"github.com/mholt/caddy"
-	"github.com/mholt/caddy/caddyhttp/httpserver"
+	"github.com/WedgeServer/wedge"
+	"github.com/WedgeServer/wedge/caddyhttp/httpserver"
 )
 
 func TestWebSocket(t *testing.T) {

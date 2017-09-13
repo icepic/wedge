@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mholt/caddy"
+	"github.com/WedgeServer/wedge"
 )
 
 // The Startup function's tests are symmetrical to Shutdown tests,

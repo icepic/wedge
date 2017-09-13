@@ -11,7 +11,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/mholt/caddy"
+	"github.com/WedgeServer/wedge"
 	"github.com/xenolf/lego/acme"
 )
 

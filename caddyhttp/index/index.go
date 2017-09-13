@@ -1,8 +1,8 @@
 package index
 
 import (
-	"github.com/mholt/caddy"
-	"github.com/mholt/caddy/caddyhttp/staticfiles"
+	"github.com/WedgeServer/wedge"
+	"github.com/WedgeServer/wedge/caddyhttp/staticfiles"
 )
 
 func init() {

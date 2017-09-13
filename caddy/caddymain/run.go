@@ -15,11 +15,11 @@ import (
 
 	"github.com/xenolf/lego/acme"
 
-	"github.com/mholt/caddy"
+	"github.com/WedgeServer/wedge"
 	// plug in the HTTP server type
-	_ "github.com/mholt/caddy/caddyhttp"
+	_ "github.com/WedgeServer/wedge/caddyhttp"
 
-	"github.com/mholt/caddy/caddytls"
+	"github.com/WedgeServer/wedge/caddytls"
 	// This is where other plugins get plugged in (imported)
 )
 

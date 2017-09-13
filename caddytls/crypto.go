@@ -26,7 +26,7 @@ import (
 
 	"golang.org/x/crypto/ocsp"
 
-	"github.com/mholt/caddy"
+	"github.com/WedgeServer/wedge"
 	"github.com/xenolf/lego/acme"
 )
 

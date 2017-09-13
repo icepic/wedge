@@ -14,7 +14,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/mholt/caddy"
+	"github.com/WedgeServer/wedge"
 )
 
 // FileServer implements a production-ready file server

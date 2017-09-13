@@ -3,7 +3,7 @@ package httpserver
 import (
 	"time"
 
-	"github.com/mholt/caddy/caddytls"
+	"github.com/WedgeServer/wedge/caddytls"
 )
 
 // SiteConfig contains information about a site

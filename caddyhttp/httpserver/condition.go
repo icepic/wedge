@@ -6,7 +6,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/mholt/caddy"
+	"github.com/WedgeServer/wedge"
 )
 
 // SetupIfMatcher parses `if` or `if_op` in the current dispenser block.

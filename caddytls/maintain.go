@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/mholt/caddy"
+	"github.com/WedgeServer/wedge"
 
 	"golang.org/x/crypto/ocsp"
 )

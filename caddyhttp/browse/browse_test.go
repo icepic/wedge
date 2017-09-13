@@ -17,8 +17,8 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/mholt/caddy/caddyhttp/httpserver"
-	"github.com/mholt/caddy/caddyhttp/staticfiles"
+	"github.com/WedgeServer/wedge/caddyhttp/httpserver"
+	"github.com/WedgeServer/wedge/caddyhttp/staticfiles"
 )
 
 const testDirPrefix = "caddy_browse_test"

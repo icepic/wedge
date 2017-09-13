@@ -17,8 +17,8 @@ import (
 
 	"crypto/tls"
 
-	"github.com/mholt/caddy/caddyfile"
-	"github.com/mholt/caddy/caddyhttp/httpserver"
+	"github.com/WedgeServer/wedge/caddyfile"
+	"github.com/WedgeServer/wedge/caddyhttp/httpserver"
 )
 
 var (

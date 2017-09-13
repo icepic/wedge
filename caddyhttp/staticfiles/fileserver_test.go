@@ -13,7 +13,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mholt/caddy"
+	"github.com/WedgeServer/wedge"
 )
 
 // TestServeHTTP covers positive scenarios when serving files.

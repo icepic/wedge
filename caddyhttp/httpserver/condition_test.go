@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/mholt/caddy"
+	"github.com/WedgeServer/wedge"
 )
 
 func TestConditions(t *testing.T) {

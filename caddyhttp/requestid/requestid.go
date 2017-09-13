@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/mholt/caddy/caddyhttp/httpserver"
+	"github.com/WedgeServer/wedge/caddyhttp/httpserver"
 	uuid "github.com/nu7hatch/gouuid"
 )
 

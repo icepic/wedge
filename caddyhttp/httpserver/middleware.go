@@ -7,7 +7,7 @@ import (
 	"path"
 	"time"
 
-	"github.com/mholt/caddy"
+	"github.com/WedgeServer/wedge"
 )
 
 func init() {

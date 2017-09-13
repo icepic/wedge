@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/mholt/caddy/caddyhttp/httpserver"
-	"github.com/mholt/caddy/caddyhttp/staticfiles"
+	"github.com/WedgeServer/wedge/caddyhttp/httpserver"
+	"github.com/WedgeServer/wedge/caddyhttp/staticfiles"
 )
 
 func (h Middleware) ServeHTTP(w http.ResponseWriter, r *http.Request) (int, error) {
