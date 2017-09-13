@@ -1,6 +1,6 @@
 <p align="center">Wedge is a general-purpose HTTP/2 web server that serves HTTPS by default.</p>
 <p align="center"><strong>Wedge is a fork of Caddy</strong>, with sponsor headers removed. The project is unofficial.</p>
-<p align="center">As a result of issue [#2](https://github.com/WedgeServer/wedge/issues/2), references to Caddy in this documentation are being changed to reference the name "Wedge" instead.</p>
+<p align="center">As a result of issue <a href="https://github.com/WedgeServer/wedge/issues/2">#2</a>, references to Caddy in this documentation are being changed to reference the name "Wedge" instead.</p>
 ---
 
 Wedge is fast, easy to use, and makes you more productive.
@@ -23,7 +23,6 @@ Then `cd` to `wedge/caddy` and `go run build.go`.
 - [Quick Start](#quick-start)
 - [Running in Production](#running-in-production)
 - [Contributing](#contributing)
-- [Donors](#donors)
 - [About the Project](#about-the-project)
 
 ## Features
@@ -86,12 +85,11 @@ Wow! Caddy can do a lot with just a few lines.
 
 ### Doing more with Wedge 
 
-To host multiple sites and do more with the Caddyfile, please see the [Caddyfile tutorial](https://caddyserver.com/tutorial/caddyfile).
+It is possible to host multiple sites and customise the web server using the configuration file.
 
-Sites with qualifying hostnames are served over [HTTPS by default](https://caddyserver.com/docs/automatic-https).
+Sites with qualifying hostnames are served over HTTPS by default.
 
-Wedge has a command line interface. Run `caddy -h` to view basic help or see the [CLI documentation](https://caddyserver.com/docs/cli) for details.
-
+Wedge has a command line interface. Run `caddy -h` to view basic help.
 
 ## Running in Production
 
@@ -114,20 +112,8 @@ We use GitHub issues and pull requests only for discussing bug reports and the d
 Thanks for making Wedge -- and the Web -- better!
 
 
-## Donors
-
-- [DigitalOcean](https://m.do.co/c/6d7bdafccf96) is hosting the Caddy project.
-- [DNSimple](https://dnsimple.link/resolving-caddy) provides DNS services for Caddy's sites.
-- [DNS Spy](https://dnsspy.io) keeps an eye on Caddy's DNS properties.
-
-We thank them for their services. **If you want to help keep Caddy free, please [become a sponsor](https://caddyserver.com/pricing)!**
-
-
 ## About the Project
 
-Caddy was born out of the need for a "batteries-included" web server that runs anywhere and doesn't have to take its configuration with it. Caddy took inspiration from [spark](https://github.com/rif/spark), [nginx](https://github.com/nginx/nginx), lighttpd,
-[Websocketd](https://github.com/joewalnes/websocketd) and [Vagrant](https://www.vagrantup.com/), which provides a pleasant mixture of features from each of them.
+Wedge was created following the announcement that sponsor headers would be added to HTTP responses, and official binaries would no longer be able to be used for commercial purposes.
 
-**The name "Caddy":** The name of the software is "Caddy", not "Caddy Server" or "CaddyServer". Please call it "Caddy" or, if you wish to clarify, "the Caddy web server". See [brand guidelines](https://caddyserver.com/brand).
-
-*Author on Twitter: [@mholt6](https://twitter.com/mholt6)*
+See the [HackerNews post](https://news.ycombinator.com/item?id=15237923).
