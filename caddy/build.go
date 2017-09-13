@@ -27,12 +27,20 @@ import (
 	"github.com/WedgeServer/builds"
 )
 
-var goos, goarch, goarm string
+var goos, goarch, goarm, gopath string
+var multiple bool
+
+type PlatformTriple struct {
+	OperatingSystem string
+	Architecture string
+	ArmVersion string
+}
 
 func init() {
 	flag.StringVar(&goos, "goos", "", "GOOS for which to build")
 	flag.StringVar(&goarch, "goarch", "", "GOARCH for which to build")
 	flag.StringVar(&goarm, "goarm", "", "GOARM for which to build")
+	flag.BoolVar(&multiple, "multiple", false, "Builds all supported platforms, ignoring all other flags")
 }
 
 const binaryName = "wedge"
@@ -40,7 +48,7 @@ const binaryName = "wedge"
 func main() {
 	flag.Parse()
 
-	gopath := os.Getenv("GOPATH")
+	gopath = os.Getenv("GOPATH")
 
 	pwd, err := os.Getwd()
 	if err != nil {
@@ -52,6 +60,41 @@ func main() {
 		log.Fatal(err)
 	}
 
+	if !multiple {
+		platform := PlatformTriple{goos, goarch, goarm}
+		runBuild(ldflags, &platform, binaryName)
+		return
+	}
+
+	platforms := []PlatformTriple{
+		PlatformTriple{"windows", "amd64", ""},
+		PlatformTriple{"windows", "386", ""},
+		PlatformTriple{"linux", "amd64", ""},
+		PlatformTriple{"linux", "386", ""},
+		PlatformTriple{"darwin", "amd64", ""},
+		PlatformTriple{"linux", "arm", "6"},
+		PlatformTriple{"linux", "arm", "7"},
+		PlatformTriple{"android", "arm", "7"},
+		PlatformTriple{"android", "arm", "6"},
+
+	}
+
+	for _, platform := range platforms {
+		name := binaryName + "_" + platform.OperatingSystem + "_" + platform.Architecture
+
+		if (platform.ArmVersion != "") {
+			name += "_" + platform.ArmVersion // e.g. linux_arm_7
+		}
+
+		if (platform.OperatingSystem == "windows") {
+			name += ".exe"
+		}
+
+		runBuild(ldflags, &platform, name)
+	}
+}
+
+func runBuild(ldflags string, triple *PlatformTriple, binaryName string) {
 	args := []string{"build", "-o", binaryName, "-ldflags", ldflags}
 	args = append(args, "-asmflags", fmt.Sprintf("-trimpath=%s", gopath))
 	args = append(args, "-gcflags", fmt.Sprintf("-trimpath=%s", gopath))
@@ -61,14 +104,13 @@ func main() {
 	cmd.Env = os.Environ()
 	for _, env := range []string{
 		"CGO_ENABLED=0",
-		"GOOS=" + goos,
-		"GOARCH=" + goarch,
-		"GOARM=" + goarm,
+		"GOOS=" + triple.OperatingSystem,
+		"GOARCH=" + triple.Architecture,
+		"GOARM=" + triple.ArmVersion,
 	} {
 		cmd.Env = append(cmd.Env, env)
 	}
-
-	err = cmd.Run()
+	err := cmd.Run()
 	if err != nil {
 		log.Fatal(err)
 	}
