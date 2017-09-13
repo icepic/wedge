@@ -10,7 +10,7 @@ Available for Windows, Mac, Linux, BSD, Solaris, and Android.
 ## Building Wedge
 
 ```
-go get github.com/caddyserver/builds
+go get github.com/WedgeServer/builds
 go get github.com/WedgeServer/wedge/caddy
 ```
 

@@ -24,7 +24,7 @@ import (
 	"os/exec"
 	"path/filepath"
 
-	"github.com/caddyserver/builds"
+	"github.com/WedgeServer/builds"
 )
 
 var goos, goarch, goarm string
