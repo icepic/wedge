@@ -74,9 +74,6 @@ func main() {
 		PlatformTriple{"darwin", "amd64", ""},
 		PlatformTriple{"linux", "arm", "6"},
 		PlatformTriple{"linux", "arm", "7"},
-		PlatformTriple{"android", "arm", "7"},
-		PlatformTriple{"android", "arm", "6"},
-
 	}
 
 	for _, platform := range platforms {
