@@ -89,13 +89,13 @@ It is possible to host multiple sites and customise the web server using the con
 
 Sites with qualifying hostnames are served over HTTPS by default.
 
-Wedge has a command line interface. Run `caddy -h` to view basic help.
+Wedge has a command line interface. Run `wedge -h` to view basic help.
 
 ## Running in Production
 
 Wedge is production-ready if you find it to be a good fit for your site and workflow.
 
-**Running as root:** We advise against this. You can still listen on ports < 1024 on Linux using setcap like so: `sudo setcap cap_net_bind_service=+ep ./caddy`
+**Running as root:** We advise against this. You can still listen on ports < 1024 on Linux using setcap like so: `sudo setcap cap_net_bind_service=+ep ./wedge`
 
 How you choose to run Wedge is up to you. Many users are satisfied with `nohup wedge &`. Others use `screen`. Users who need Wedge to come back up after reboots either do so in the script that caused the reboot, add a command to an init script, or configure a service with their OS.
 
